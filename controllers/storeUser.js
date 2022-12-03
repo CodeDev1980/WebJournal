@@ -1,6 +1,5 @@
 const Member = require('../models/Users');
 const path = require('path');
-const flash = require('connect-flash');
 
 module.exports = (req, res) => {
     let image = req.files.image;

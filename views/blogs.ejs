@@ -10,19 +10,19 @@
       <h1 class="display-5 text-center mb-4">Articles from Members</h1>
         <div class="row d-flex mx-auto justify-content-center alieng-items-center text-center">
           
-          <% for(i=0; i < blogs.length; i++){ %> 
+          <% for(i=0; i < articles.length; i++){ %> 
             <div class="card m-3 p-2" style="width: 19rem;">
-              <h2 class="text-dark"><%= blogs[i].title %></h2>   
-              <a href="/post/<%= blogs[i]._id %>">
-                <img src="<%= blogs[i].image %>" 
+              <h2 class="text-dark"><%= articles[i].title %></h2>   
+              <a href="/post/<%= articles[i]._id %>">
+                <img src="<%= articles[i].image %>" 
                     class="img-fluid rounded-circle"
                     style="height: 160px;"
-                    alt="blog-image">
+                    alt="<%= articles[i].title %>">
               </a>
               
               <small>
-                Posted On <%= blogs[i].datePosted.toLocaleString() %>, 
-                By <%= blogs[i].userid.username %>
+                Posted On <%= articles[i].datePosted.toLocaleString() %>, 
+                By <%= articles[i].userid.username %>
               </small>
             </div>
           <% } %>

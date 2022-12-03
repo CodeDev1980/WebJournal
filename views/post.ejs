@@ -10,7 +10,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/blogs">Main Blogs</a></li>
-          <li class="breadcrumb-item active" aria-current="page"><%= post.title %></li>
+          <li class="breadcrumb-item active" aria-current="page"><%= blog.title %></li>
         </ol>
       </nav>
     </div>
@@ -18,20 +18,20 @@
     <div class="container my-5 py-5">
         <div class="row text-center">
           <div class="col-md-6">
-            <img src="<%= post.image %>" class="img-fluid shadow-2 rounded-2" alt="<%= post.title %>">
+            <img src="<%= blog.image %>" class="img-fluid shadow-2 rounded-2" alt="<%= blog.title %>">
             <p class="text-muted">
-              Posted On <%= post.datePosted.toLocaleString() %>, By <%= post.userid.username %>
+              Posted On <%= blog.datePosted.toLocaleString() %>, By <%= blog.userid.username %>
             </p>
           </div>
             <div class="col-md-6">
 
-                <h1 class="dipslay-3 mb-3"><%= post.title %></h1>   
+                <h1 class="dipslay-3 mb-3"><%= blog.title %></h1>   
           
                 <p>
-                    <%= post.body %>
+                    <%= blog.body %>
                 </p> 
                 <% if(loggedIn) { %> 
-                  <a href="/delete/<%= post._id %>" class="btn btn-warning">Delete Post</a>  
+                  <a href="/delete/<%= blog._id %>" class="btn btn-warning">Delete Post</a>  
                 <% } %>
                 
             </div>

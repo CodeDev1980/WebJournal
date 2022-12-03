@@ -1,7 +1,7 @@
-const User = require('../models/Users');
+const UserProfile = require('../models/Users');
 
 module.exports = async (req, res) => {
-    const users = await User.find({})
+    const users = await UserProfile.find({})
     res.render('profiles', {
         users
     })
