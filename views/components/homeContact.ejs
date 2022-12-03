@@ -1,0 +1,22 @@
+<div class="container my-4 py-4">
+    <h2 class="display-5 mb-3">Contact Us</h2>
+    <div class="row mb-5">
+      <div class="col-md-12 p-3">
+        <form action="/sendForm" enctype="multipart/form-data" method="post">
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" class="form-control" required spellcheck="true" rows="7"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>

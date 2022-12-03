@@ -1,0 +1,64 @@
+.navLogo {
+    border: 5px double #cea135;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.line {
+    width: 300px;
+    border: 2px solid rgb(133, 86, 0);
+    background-color: rgb(133, 86, 0);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn-gold {
+  background-color: #cea135;
+  color: white!important;
+}
+
+.featureColor {
+  color: #cea135;
+}
+
+.feature-title {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 11px 9px 10px 8px #cea135;
+}
+
+.lightFeatureColor {
+  color: rgb(66, 158, 228);
+}
+
+.slow {
+    --animate-duration: 2s;
+  }
+  
+  /* This changes all the animations globally */
+  :root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+
+  .home-banner { 
+    background: url('https://cdn.pixabay.com/photo/2020/03/06/08/00/laptop-4906312_960_720.jpg') 
+    no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 220px;
+    padding-bottom: 220px;
+  }
+
+.notFound {
+  background: url('/img/404notfound.png') 
+    no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 570px;
+}

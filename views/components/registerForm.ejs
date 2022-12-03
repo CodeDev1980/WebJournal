@@ -1,0 +1,20 @@
+<div class="container my-5 py-5">
+    <div class="row justify-content-center align-items-center text-center">
+        <div class="col-md-10">
+            <% if(!loggedIn){ %> 
+                <h2>Register for Member Access</h2>
+                <p>
+                    Register to get access to create blogs, shop our store, share content, and create a profile.
+                </p>
+                <a href="/register" class="btn btn-info">Register</a> 
+                <a href="/login" class="btn btn-outline-info">Login</a>    
+            <% } %>
+            <% if(loggedIn) { %> 
+                <h2>Share a post, your profile, or read articles.</h2>
+                
+                <a href="/create" class="btn btn-info">New Post</a> 
+                <a href="/profiles" class="btn btn-outline-info">Profiles</a>    
+            <% } %>
+        </div>
+    </div>
+</div>

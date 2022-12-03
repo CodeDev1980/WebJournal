@@ -1,0 +1,24 @@
+<div class="container my-5 py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-10">
+            <% if(errors != null && errors.length > 0){ %>
+                <ul class="list-group">
+                    <% for(i=0; i < errors.length; i++){ %> 
+                        <li class="list-group-item list-group-danger">
+                            <%= errors[i] %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+            <form action="/store/user" enctype="multipart/form-data" method="post">
+                <input type="text" name="username" value="<%= username %>" class="form-control mb-3" placeholder="Username">
+                <input type="password" name="password" value="<%= password %>" class="form-control mb-3" placeholder="password">
+                <label for="image" class="form-label">Picture</label>
+                <input type="file" id="image" name="image" required accept="image/*" class="mb-3 form-control" />
+                <label for="about" class="form-label">About You</label>
+                <textarea name="about" id="about" class="form-control mb-3" rows="10" required spellcheck="true"></textarea>
+                <button type="submit" class="btn btn-success">register</button> <button type="reset" class="btn btn-warning">clear</button>
+            </form>
+        </div>
+    </div>
+</div>
