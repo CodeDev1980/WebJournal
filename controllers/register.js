@@ -1,4 +1,3 @@
-const flash = require('connect-flash')
 
 module.exports = (req, res) => {
     var username = ""
@@ -9,7 +8,6 @@ module.exports = (req, res) => {
         username = data.username
         password = data.password
     }
-
     res.render('register', {
         errors: req.flash('validationErrors'),
         username: username,
