@@ -37,19 +37,19 @@ if(mongoose){
 }
 
 // routes
-const homePage = require('./controllers/homePage');
-const newBlog = require('./controllers/createPost');
-const storePost = require('./controllers/storePost');
-const blogsPage = require('./controllers/blogsPage');
-const singlePost = require('./controllers/singlePost');
-const deletePost = require('./controllers/deletePost');
-const registerPage = require('./controllers/register');
-const storeUser = require('./controllers/storeUser');
-const loginPage = require('./controllers/login');
-const loginUser = require('./controllers/loginUser');
-const profiles = require('./controllers/profiles');
-const profile = require('./controllers/profile');
-const logoutUser = require('./controllers/logoutUser');
+const homeController = require('./controllers/homePage');
+const newBlogController = require('./controllers/createPost');
+const storePostController = require('./controllers/storePost');
+const blogsController = require('./controllers/blogsPage');
+const singlePostController = require('./controllers/singlePost');
+const deletePostController = require('./controllers/deletePost');
+const registerController = require('./controllers/register');
+const storeUserController = require('./controllers/storeUser');
+const loginController = require('./controllers/login');
+const loginUserController = require('./controllers/loginUser');
+const profilesController = require('./controllers/profiles');
+const singleProfileController = require('./controllers/profile');
+const logoutUserController = require('./controllers/logoutUser');
 
 // middleware
 const validateMiddleWare = require('./middleware/validate');
@@ -60,18 +60,18 @@ app.listen(process.env.PORT || 3000, () => {
     console.log('App listening')
 })
 
-app.get('/', homePage);
-app.get('/create', authMiddleWare, newBlog);
-app.post('/send/post', validateMiddleWare, storePost);
-app.get('/blogs', blogsPage);
-app.get('/post/:id', singlePost);
-app.get('/delete/:id', deletePost)
-app.get('/register',redirect, registerPage);
-app.post('/store/user', storeUser);
-app.get('/login', redirect, loginPage)
-app.post('/login/user', loginUser);
-app.get('/profiles', authMiddleWare, profiles);
-app.get('/profile/:id', authMiddleWare, profile);
-app.get('/logout', logoutUser);
+app.get('/', homeController);
+app.get('/create', authMiddleWare, newBlogController);
+app.post('/send/post', validateMiddleWare, storePostController);
+app.get('/blogs', blogsController);
+app.get('/post/:id', singlePostController);
+app.get('/delete/:id', deletePostController)
+app.get('/register',redirect, registerController);
+app.post('/store/user', storeUserController);
+app.get('/login', redirect, loginController)
+app.post('/login/user', loginUserController);
+app.get('/profiles', authMiddleWare, profilesController);
+app.get('/profile/:id', authMiddleWare, singleProfileController);
+app.get('/logout', logoutUserController);
 
 app.use((req, res) => res.render('notFound'))
