@@ -38,6 +38,7 @@ if(mongoose){
 
 // routes
 const homeController = require('./controllers/homePage');
+const aboutController = require('./controllers/aboutPage');
 const newBlogController = require('./controllers/createPost');
 const storePostController = require('./controllers/storePost');
 const blogsController = require('./controllers/blogsPage');
@@ -61,6 +62,7 @@ app.listen(process.env.PORT || 3000, () => {
 })
 
 app.get('/', homeController);
+app.get('/about', aboutController);
 app.get('/create', authMiddleWare, newBlogController);
 app.post('/send/post', validateMiddleWare, storePostController);
 app.get('/blogs', blogsController);
