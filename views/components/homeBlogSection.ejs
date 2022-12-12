@@ -7,6 +7,7 @@
       <hr>
       <% for(i=0; i < articles.length; i++) { %> 
         <div class="card m-3" style="width:19rem;">
+          <img src="<%= articles[i].image %>" class="img-fluid rounded" />
           <h2><%= articles[i].title %></h2>
           <p>
             <%= articles[i].body.substring(0, 110) %> . . .
