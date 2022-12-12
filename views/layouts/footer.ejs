@@ -16,8 +16,14 @@
         </div>
         <div class="col-md-3">
           <h4 class="featureColor">Links</h4>
-          <a href="/register" class="nav-link text-white">signup</a> <br>
-          <a href="/login" class="nav-link text-white">login</a> <br>
+          <% if(!loggedIn){ %>
+            <a href="/register" class="nav-link text-white">signup</a> <br>
+            <a href="/login" class="nav-link text-white">login</a> <br>
+          <% } %>
+          <% if(loggedIn){ %>
+            <a href="/create" class="nav-link text-white">new post</a> <br>
+            <a href="/logout" class="nav-link text-white">logout</a> <br>
+          <% } %>
           <a href="mailto:stephenbrooks714@gmail.com" class="nav-link text-white">support</a> 
         </div>
       </div>
