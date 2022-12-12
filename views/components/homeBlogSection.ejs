@@ -3,21 +3,17 @@
       <hr class="line">
     </h2>
     
-    <div class="row flex-row-reverse mb-5">
+    <div class="row text-center row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center mb-5">
       <hr>
       <% for(i=0; i < articles.length; i++) { %> 
-        <div class="col-md-8 p-3">
+        <div class="card m-3" style="width:19rem;">
           <h2><%= articles[i].title %></h2>
           <p>
             <%= articles[i].body.substring(0, 110) %> . . .
           </p>
           <a href="/post/<%= articles[i]._id %>" class="btn btn-outline-primary">Read More</a>
         </div>
-        <div class="col-md-4 p-3">
-          <img src="/img/bloggingblog-concepts-ideas-white-worktable-260nw-1029506242.jpg"
-              class="img-fluid shadow-2 rounded"
-              alt="img" />
-        </div>  
+          
         <hr />
       <% } %>
     </div>
