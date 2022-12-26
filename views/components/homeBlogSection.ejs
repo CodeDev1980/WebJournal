@@ -1,21 +1,19 @@
 <div class="container my-2 py-2">
-    <h2 class="display-5 mb-4 featureColor">Latest Articles
+    <h2 class="h1 m-4 featureColor">Latest Articles
       <hr class="line">
     </h2>
     
     <div class="row text-center row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center mb-5">
-      <hr>
+
       <% for(i=0; i < articles.length; i++) { %> 
-        <div class="card m-3" style="width:19rem;">
-          <img src="<%= articles[i].image %>" class="img-fluid rounded" />
+        <div class="card m-3" style="max-width:20rem;">
+          <img src="<%= articles[i].image %>" class="img-fluid rounded max-image-size" />
           <h2><%= articles[i].title %></h2>
           <p>
-            <%= articles[i].body.substring(0, 110) %> . . .
+            <%= articles[i].body.substring(0, 90) %> . . .
           </p>
           <a href="/post/<%= articles[i]._id %>" class="btn btn-outline-primary">Read More</a>
         </div>
-          
-        <hr />
       <% } %>
     </div>
 

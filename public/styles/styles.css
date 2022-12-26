@@ -62,3 +62,13 @@
     padding-top: 30px;
     padding-bottom: 570px;
 }
+
+.max-image-size {
+    max-height: 140px;
+}
+
+@media(max-width: 768px){
+    .max-image-size{
+        max-height: none;
+    }
+}

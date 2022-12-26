@@ -32,5 +32,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeDev1980/WebJournal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeDev1980/WebJournal/issues"
+  },
+  "homepage": "https://github.com/CodeDev1980/WebJournal#readme"
 }

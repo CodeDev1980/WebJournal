@@ -7,19 +7,15 @@
     <!-- navbar -->
 
     <div class="container my-4 py-4">
-      <h1 class="display-5 text-center mb-4">Articles from Members</h1>
-        <div class="row d-flex mx-auto justify-content-center alieng-items-center text-center">
+      <h1 class="display-5 text-center mb-5">Member Profiles</h1>
+        <div class="row d-flex mx-auto justify-content-center align-items-center text-center">
           
           <% for(i=0; i < users.length; i++){ %> 
             <div class="card m-3 p-2" style="width: 19rem;">
-              <h2 class="text-dark"><%= users[i].username %></h2>   
               <a href="/profile/<%= users[i]._id %>">
-                <img src="<%= users[i].image %>" 
-                    class="img-fluid rounded-circle"
-                    style="height: 160px;"
-                    alt="blog-image">
+                <h2 class="text-dark"><%= users[i].username %></h2>
               </a>
-              <small>Posted On <%= users[i].dateJoined.toLocaleString() %></small>
+              <small>Joined On <%= users[i].dateJoined.toLocaleString() %></small>
             </div>
           <% } %>
           

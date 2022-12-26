@@ -51,6 +51,7 @@ const loginUserController = require('./controllers/loginUser');
 const profilesController = require('./controllers/profiles');
 const singleProfileController = require('./controllers/profile');
 const logoutUserController = require('./controllers/logoutUser');
+const coursesController = require('./controllers/courses');
 
 // middleware
 const validateMiddleWare = require('./middleware/validate');
@@ -63,6 +64,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.get('/', homeController);
 app.get('/about', aboutController);
+app.get('/courses', authMiddleWare, coursesController)
 app.get('/create', authMiddleWare, newBlogController);
 app.post('/send/post', validateMiddleWare, storePostController);
 app.get('/blogs', blogsController);
